@@ -1,1 +1,10 @@
 SSChartwellPlayground.xcodeproj/xcuserdata
+Common/ChartwellBars.ttf
+Common/ChartwellBarsVertical.ttf
+Common/ChartwellLines.ttf
+Common/ChartwellPies.ttf
+Common/ChartwellRadar.ttf
+Common/ChartwellRings.ttf
+Common/ChartwellRose.ttf
+Cartfile.resolved
+Carthage
