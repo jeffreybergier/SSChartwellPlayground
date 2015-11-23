@@ -13,8 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var chartStackView: UIStackView?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         
         // MARK: Bars Vertical
@@ -47,10 +47,10 @@ class ViewController: UIViewController {
             barsVertical.appendComponent(component)
         }
         let barsVerticalRenderer = Chart.Renderer(data: barsVertical, fontSize: 100)
-        let barsVerticalTIFFImage = barsVerticalRenderer?.image
         let barsVerticalImageView = UIImageView()
         barsVerticalImageView.contentMode = UIViewContentMode.Center
-        barsVerticalImageView.image = barsVerticalTIFFImage
+        barsVerticalImageView.image = barsVerticalRenderer?.image
+        //barsVerticalImageView.animationImages = barsVerticalRenderer?.animatedImage()
         
         self.chartStackView?.addArrangedSubview(barsVerticalImageView)
         
@@ -78,10 +78,10 @@ class ViewController: UIViewController {
             pies.appendComponent(component)
         }
         let piesRenderer = Chart.Renderer(data: pies, fontSize: 200)
-        let piesTIFFImage = piesRenderer?.image
         let piesImageView = UIImageView()
         piesImageView.contentMode = UIViewContentMode.Center
-        piesImageView.image = piesTIFFImage
+        piesImageView.image = piesRenderer?.image
+        //piesImageView.animationImages = piesRenderer?.animatedImage()
         
         self.chartStackView?.addArrangedSubview(piesImageView)
         
@@ -114,12 +114,33 @@ class ViewController: UIViewController {
             let _ = rings.appendComponent(component)
         }
         let ringsRenderer = Chart.Renderer(data: rings, fontSize: 300)
-        let ringsTIFFImage = ringsRenderer?.image
         let ringsImageView = UIImageView()
         ringsImageView.contentMode = UIViewContentMode.Center
-        ringsImageView.image = ringsTIFFImage
+        ringsImageView.image = ringsRenderer?.image
         
         self.chartStackView?.addArrangedSubview(ringsImageView)
+        
+        
+        ringsRenderer?.generateAnimatedImagesWithFrameCount(35) { images in
+            ringsImageView.animationImages = images
+            ringsImageView.animationDuration = 2
+            ringsImageView.animationRepeatCount = 0
+            ringsImageView.startAnimating()
+        }
+        
+        barsVerticalRenderer?.generateAnimatedImagesWithFrameCount(35) { images in
+            barsVerticalImageView.animationImages = images
+            barsVerticalImageView.animationDuration = 2
+            barsVerticalImageView.animationRepeatCount = 0
+            barsVerticalImageView.startAnimating()
+        }
+        
+        piesRenderer?.generateAnimatedImagesWithFrameCount(35) { images in
+            piesImageView.animationImages = images
+            piesImageView.animationDuration = 2
+            piesImageView.animationRepeatCount = 0
+            piesImageView.startAnimating()
+        }
     }
 }
 
