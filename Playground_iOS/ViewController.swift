@@ -50,7 +50,7 @@ class ViewController: UIViewController {
             barsVertical.appendComponent(component)
         }
         let barsVerticalRenderer = Chart.Renderer(data: barsVertical, fontSize: 100)
-        let barsVerticalTIFFImage = barsVerticalRenderer.image
+        let barsVerticalTIFFImage = barsVerticalRenderer?.image
         let barsVerticalImageView = UIImageView()
         barsVerticalImageView.contentMode = UIViewContentMode.Center
         barsVerticalImageView.image = barsVerticalTIFFImage
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
             pies.appendComponent(component)
         }
         let piesRenderer = Chart.Renderer(data: pies, fontSize: 100)
-        let piesTIFFImage = piesRenderer.image
+        let piesTIFFImage = piesRenderer?.image
         let piesImageView = UIImageView()
         piesImageView.contentMode = UIViewContentMode.Center
         piesImageView.image = piesTIFFImage
@@ -117,7 +117,7 @@ class ViewController: UIViewController {
             let _ = rings.appendComponent(component)
         }
         let ringsRenderer = Chart.Renderer(data: rings, fontSize: 300)
-        let ringsTIFFImage = ringsRenderer.image
+        let ringsTIFFImage = ringsRenderer?.image
         let ringsImageView = UIImageView()
         ringsImageView.contentMode = UIViewContentMode.Center
         ringsImageView.image = ringsTIFFImage

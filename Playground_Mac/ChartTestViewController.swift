@@ -42,7 +42,7 @@ class ChartTestViewController: NSViewController {
             barsVertical.appendComponent(component)
         }
         let barsVerticalRenderer = Chart.Renderer(data: barsVertical, fontSize: 100)
-        let barsVerticalTIFFImage = barsVerticalRenderer.TIFFImage
+        let barsVerticalTIFFImage = barsVerticalRenderer?.TIFFImage
         let barsVerticalImageView = NSImageView()
         barsVerticalImageView.image = barsVerticalTIFFImage
         
@@ -72,7 +72,7 @@ class ChartTestViewController: NSViewController {
             pies.appendComponent(component)
         }
         let piesRenderer = Chart.Renderer(data: pies, fontSize: 100)
-        let piesTIFFImage = piesRenderer.TIFFImage
+        let piesTIFFImage = piesRenderer?.TIFFImage
         let piesImageView = NSImageView()
         piesImageView.image = piesTIFFImage
         
@@ -107,7 +107,7 @@ class ChartTestViewController: NSViewController {
             let _ = rings.appendComponent(component)
         }
         let ringsRenderer = Chart.Renderer(data: rings, fontSize: 300)
-        let ringsTIFFImage = ringsRenderer.TIFFImage
+        let ringsTIFFImage = ringsRenderer?.TIFFImage
         let ringsImageView = NSImageView()
         ringsImageView.image = ringsTIFFImage
         
