@@ -35,6 +35,8 @@
 		73FCC39E1C03729200C4F8CC /* SSChartwell_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC39B1C03727D00C4F8CC /* SSChartwell_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73FCC39F1C03729C00C4F8CC /* SSChartwell_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC39C1C03728900C4F8CC /* SSChartwell_macOS.framework */; };
 		73FCC3A01C03729C00C4F8CC /* SSChartwell_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC39C1C03728900C4F8CC /* SSChartwell_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73FCC3A21C03980700C4F8CC /* ChartListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCC3A11C03980700C4F8CC /* ChartListTableViewController.swift */; };
+		73FCC3A41C03986B00C4F8CC /* ChartDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCC3A31C03986B00C4F8CC /* ChartDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,6 +89,8 @@
 		73A804441C028B1D00C2823E /* Playground_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Playground_Mac.entitlements; sourceTree = "<group>"; };
 		73FCC39B1C03727D00C4F8CC /* SSChartwell_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSChartwell_iOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SSChartwellPlayground-akjnhortmiawkidugmkicwdsavic/Build/Products/Debug-iphoneos/SSChartwell_iOS.framework"; sourceTree = "<group>"; };
 		73FCC39C1C03728900C4F8CC /* SSChartwell_macOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSChartwell_macOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SSChartwellPlayground-akjnhortmiawkidugmkicwdsavic/Build/Products/Debug/SSChartwell_macOS.framework"; sourceTree = "<group>"; };
+		73FCC3A11C03980700C4F8CC /* ChartListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartListTableViewController.swift; sourceTree = "<group>"; };
+		73FCC3A31C03986B00C4F8CC /* ChartDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 			children = (
 				73A803F71C0287C900C2823E /* AppDelegate.swift */,
 				73A803F91C0287C900C2823E /* ViewController.swift */,
+				73FCC3A11C03980700C4F8CC /* ChartListTableViewController.swift */,
+				73FCC3A31C03986B00C4F8CC /* ChartDetailViewController.swift */,
 				73A803FB1C0287C900C2823E /* Main.storyboard */,
 				73A803FE1C0287C900C2823E /* Assets.xcassets */,
 				73A804001C0287C900C2823E /* LaunchScreen.storyboard */,
@@ -311,7 +317,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73FCC3A21C03980700C4F8CC /* ChartListTableViewController.swift in Sources */,
 				73A803FA1C0287C900C2823E /* ViewController.swift in Sources */,
+				73FCC3A41C03986B00C4F8CC /* ChartDetailViewController.swift in Sources */,
 				73A803F81C0287C900C2823E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
