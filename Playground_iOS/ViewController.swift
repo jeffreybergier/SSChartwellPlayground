@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SSChartwell
+import SSChartwell_iOS
 
 class ViewController: UIViewController {
 

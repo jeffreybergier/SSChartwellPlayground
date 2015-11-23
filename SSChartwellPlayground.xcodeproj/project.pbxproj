@@ -31,57 +31,33 @@
 		73A8042F1C02893E00C2823E /* ChartwellLines.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804221C02893E00C2823E /* ChartwellLines.ttf */; };
 		73A804301C02893E00C2823E /* ChartwellPies.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804231C02893E00C2823E /* ChartwellPies.ttf */; };
 		73A804311C02893E00C2823E /* ChartwellPies.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804231C02893E00C2823E /* ChartwellPies.ttf */; };
-		73A804371C0289D700C2823E /* SSChartwell.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 73A804351C0289D700C2823E /* SSChartwell.framework.dSYM */; };
-		73A8043B1C0289E100C2823E /* SSChartwell.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 73A804391C0289E100C2823E /* SSChartwell.framework.dSYM */; };
-		73A8043C1C0289F100C2823E /* SSChartwell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A804341C0289D700C2823E /* SSChartwell.framework */; };
-		73A8043D1C0289F100C2823E /* SSChartwell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73A804341C0289D700C2823E /* SSChartwell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73A8043F1C0289F700C2823E /* SSChartwell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A804381C0289E100C2823E /* SSChartwell.framework */; };
-		73A804401C0289F700C2823E /* SSChartwell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73A804381C0289E100C2823E /* SSChartwell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73A804461C028B9F00C2823E /* SSChartwell.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 73A804391C0289E100C2823E /* SSChartwell.framework.dSYM */; };
-		73A804481C028BB300C2823E /* SSChartwell.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 73A804351C0289D700C2823E /* SSChartwell.framework.dSYM */; };
+		73FCC38F1C02CC8300C4F8CC /* SSChartwell_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC38E1C02CC7B00C4F8CC /* SSChartwell_iOS.framework */; };
+		73FCC3901C02CC8300C4F8CC /* SSChartwell_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC38E1C02CC7B00C4F8CC /* SSChartwell_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73FCC3911C02CC8700C4F8CC /* SSChartwell_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC38D1C02CC5F00C4F8CC /* SSChartwell_macOS.framework */; };
+		73FCC3921C02CC8700C4F8CC /* SSChartwell_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC38D1C02CC5F00C4F8CC /* SSChartwell_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		73A8043E1C0289F100C2823E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				73A8043D1C0289F100C2823E /* SSChartwell.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		73A804411C0289F700C2823E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				73A804401C0289F700C2823E /* SSChartwell.framework in Embed Frameworks */,
+				73FCC3921C02CC8700C4F8CC /* SSChartwell_macOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		73A804451C028B9000C2823E /* CopyFiles */ = {
+		73FCC3881C02CBA900C4F8CC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 16;
+			dstSubfolderSpec = 10;
 			files = (
-				73A804461C028B9F00C2823E /* SSChartwell.framework.dSYM in CopyFiles */,
+				73FCC3901C02CC8300C4F8CC /* SSChartwell_iOS.framework in Embed Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		73A804471C028BB000C2823E /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				73A804481C028BB300C2823E /* SSChartwell.framework.dSYM in CopyFiles */,
-			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -108,11 +84,9 @@
 		73A804211C02893E00C2823E /* ChartwellBarsVertical.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChartwellBarsVertical.ttf; sourceTree = "<group>"; };
 		73A804221C02893E00C2823E /* ChartwellLines.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChartwellLines.ttf; sourceTree = "<group>"; };
 		73A804231C02893E00C2823E /* ChartwellPies.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChartwellPies.ttf; sourceTree = "<group>"; };
-		73A804341C0289D700C2823E /* SSChartwell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSChartwell.framework; path = Carthage/Build/iOS/SSChartwell.framework; sourceTree = SOURCE_ROOT; };
-		73A804351C0289D700C2823E /* SSChartwell.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SSChartwell.framework.dSYM; path = Carthage/Build/iOS/SSChartwell.framework.dSYM; sourceTree = SOURCE_ROOT; };
-		73A804381C0289E100C2823E /* SSChartwell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSChartwell.framework; path = Carthage/Build/Mac/SSChartwell.framework; sourceTree = SOURCE_ROOT; };
-		73A804391C0289E100C2823E /* SSChartwell.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SSChartwell.framework.dSYM; path = Carthage/Build/Mac/SSChartwell.framework.dSYM; sourceTree = SOURCE_ROOT; };
 		73A804441C028B1D00C2823E /* Playground_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Playground_Mac.entitlements; sourceTree = "<group>"; };
+		73FCC38D1C02CC5F00C4F8CC /* SSChartwell_macOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSChartwell_macOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SSChartwellPlayground-akjnhortmiawkidugmkicwdsavic/Build/Products/Debug/SSChartwell_macOS.framework"; sourceTree = "<group>"; };
+		73FCC38E1C02CC7B00C4F8CC /* SSChartwell_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSChartwell_iOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SSChartwellPlayground-akjnhortmiawkidugmkicwdsavic/Build/Products/Debug-iphoneos/SSChartwell_iOS.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73A8043C1C0289F100C2823E /* SSChartwell.framework in Frameworks */,
+				73FCC38F1C02CC8300C4F8CC /* SSChartwell_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73A8043F1C0289F700C2823E /* SSChartwell.framework in Frameworks */,
+				73FCC3911C02CC8700C4F8CC /* SSChartwell_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,8 +174,7 @@
 		73A804321C0289A800C2823E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				73A804341C0289D700C2823E /* SSChartwell.framework */,
-				73A804351C0289D700C2823E /* SSChartwell.framework.dSYM */,
+				73FCC38E1C02CC7B00C4F8CC /* SSChartwell_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,8 +182,7 @@
 		73A804331C0289B600C2823E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				73A804381C0289E100C2823E /* SSChartwell.framework */,
-				73A804391C0289E100C2823E /* SSChartwell.framework.dSYM */,
+				73FCC38D1C02CC5F00C4F8CC /* SSChartwell_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,8 +197,7 @@
 				73A803F01C0287C900C2823E /* Sources */,
 				73A803F11C0287C900C2823E /* Frameworks */,
 				73A803F21C0287C900C2823E /* Resources */,
-				73A8043E1C0289F100C2823E /* Embed Frameworks */,
-				73A804471C028BB000C2823E /* CopyFiles */,
+				73FCC3881C02CBA900C4F8CC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,7 +216,6 @@
 				73A804081C0287DD00C2823E /* Frameworks */,
 				73A804091C0287DD00C2823E /* Resources */,
 				73A804411C0289F700C2823E /* Embed Frameworks */,
-				73A804451C028B9000C2823E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -312,7 +282,6 @@
 				73A804241C02893E00C2823E /* ChartwellRadar.ttf in Resources */,
 				73A8042C1C02893E00C2823E /* ChartwellBarsVertical.ttf in Resources */,
 				73A8042A1C02893E00C2823E /* ChartwellBars.ttf in Resources */,
-				73A804371C0289D700C2823E /* SSChartwell.framework.dSYM in Resources */,
 				73A8042E1C02893E00C2823E /* ChartwellLines.ttf in Resources */,
 				73A803FD1C0287C900C2823E /* Main.storyboard in Resources */,
 			);
@@ -330,7 +299,6 @@
 				73A804251C02893E00C2823E /* ChartwellRadar.ttf in Resources */,
 				73A8042D1C02893E00C2823E /* ChartwellBarsVertical.ttf in Resources */,
 				73A8042B1C02893E00C2823E /* ChartwellBars.ttf in Resources */,
-				73A8043B1C0289E100C2823E /* SSChartwell.framework.dSYM in Resources */,
 				73A8042F1C02893E00C2823E /* ChartwellLines.ttf in Resources */,
 				73A804131C0287DD00C2823E /* MainMenu.xib in Resources */,
 			);
@@ -423,10 +391,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -442,7 +407,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Playground_iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -478,10 +443,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -491,7 +453,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Playground_iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.Playground-iOS";
@@ -527,10 +489,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -547,7 +506,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Playground_Mac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.Playground-Mac";
@@ -582,10 +541,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -596,7 +552,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Playground_Mac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.Playground-Mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
