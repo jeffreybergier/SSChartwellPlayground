@@ -71,7 +71,7 @@ class ChartTestViewController: NSViewController {
         for component in pieComponents {
             pies.appendComponent(component)
         }
-        let piesRenderer = Chart.Renderer(data: pies, fontSize: 100)
+        let piesRenderer = Chart.Renderer(data: pies, fontSize: 200)
         let piesTIFFImage = piesRenderer?.TIFFImage
         let piesImageView = NSImageView()
         piesImageView.image = piesTIFFImage

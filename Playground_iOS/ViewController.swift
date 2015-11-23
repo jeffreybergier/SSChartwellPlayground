@@ -46,9 +46,6 @@ class ViewController: UIViewController {
         for component in barComponents {
             barsVertical.appendComponent(component)
         }
-        for component in barComponents {
-            barsVertical.appendComponent(component)
-        }
         let barsVerticalRenderer = Chart.Renderer(data: barsVertical, fontSize: 100)
         let barsVerticalTIFFImage = barsVerticalRenderer?.image
         let barsVerticalImageView = UIImageView()
@@ -80,7 +77,7 @@ class ViewController: UIViewController {
         for component in pieComponents {
             pies.appendComponent(component)
         }
-        let piesRenderer = Chart.Renderer(data: pies, fontSize: 100)
+        let piesRenderer = Chart.Renderer(data: pies, fontSize: 200)
         let piesTIFFImage = piesRenderer?.image
         let piesImageView = UIImageView()
         piesImageView.contentMode = UIViewContentMode.Center

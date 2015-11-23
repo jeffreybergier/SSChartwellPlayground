@@ -29,12 +29,12 @@
 		73A8042D1C02893E00C2823E /* ChartwellBarsVertical.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804211C02893E00C2823E /* ChartwellBarsVertical.ttf */; };
 		73A8042E1C02893E00C2823E /* ChartwellLines.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804221C02893E00C2823E /* ChartwellLines.ttf */; };
 		73A8042F1C02893E00C2823E /* ChartwellLines.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804221C02893E00C2823E /* ChartwellLines.ttf */; };
-		73A804311C02893E00C2823E /* ChartwellPies.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804231C02893E00C2823E /* ChartwellPies.ttf */; };
 		73FCC38F1C02CC8300C4F8CC /* SSChartwell_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC38E1C02CC7B00C4F8CC /* SSChartwell_iOS.framework */; };
 		73FCC3901C02CC8300C4F8CC /* SSChartwell_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC38E1C02CC7B00C4F8CC /* SSChartwell_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73FCC3911C02CC8700C4F8CC /* SSChartwell_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC38D1C02CC5F00C4F8CC /* SSChartwell_macOS.framework */; };
 		73FCC3921C02CC8700C4F8CC /* SSChartwell_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC38D1C02CC5F00C4F8CC /* SSChartwell_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73FCC3981C02E33800C4F8CC /* ChartwellPies.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804231C02893E00C2823E /* ChartwellPies.ttf */; };
+		73FCC3991C02EE8700C4F8CC /* ChartwellPies.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804231C02893E00C2823E /* ChartwellPies.ttf */; };
+		73FCC39A1C02EFC500C4F8CC /* ChartwellPies.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804231C02893E00C2823E /* ChartwellPies.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -278,7 +278,7 @@
 				73A804021C0287C900C2823E /* LaunchScreen.storyboard in Resources */,
 				73A804281C02893E00C2823E /* ChartwellRose.ttf in Resources */,
 				73A803FF1C0287C900C2823E /* Assets.xcassets in Resources */,
-				73FCC3981C02E33800C4F8CC /* ChartwellPies.ttf in Resources */,
+				73FCC39A1C02EFC500C4F8CC /* ChartwellPies.ttf in Resources */,
 				73A804241C02893E00C2823E /* ChartwellRadar.ttf in Resources */,
 				73A8042C1C02893E00C2823E /* ChartwellBarsVertical.ttf in Resources */,
 				73A8042A1C02893E00C2823E /* ChartwellBars.ttf in Resources */,
@@ -295,7 +295,7 @@
 				73A8041B1C0288F800C2823E /* ChartTestWindowController.xib in Resources */,
 				73A804291C02893E00C2823E /* ChartwellRose.ttf in Resources */,
 				73A804101C0287DD00C2823E /* Assets.xcassets in Resources */,
-				73A804311C02893E00C2823E /* ChartwellPies.ttf in Resources */,
+				73FCC3991C02EE8700C4F8CC /* ChartwellPies.ttf in Resources */,
 				73A804251C02893E00C2823E /* ChartwellRadar.ttf in Resources */,
 				73A8042D1C02893E00C2823E /* ChartwellBarsVertical.ttf in Resources */,
 				73A8042B1C02893E00C2823E /* ChartwellBars.ttf in Resources */,
