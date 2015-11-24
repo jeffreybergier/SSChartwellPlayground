@@ -52,7 +52,7 @@ class ChartDetailViewController: UIViewController {
             return
         }
         
-        self.title = "\(chartStyle.associatedType)"
+        self.title = "\(chartStyle.rawValue)"
         
         self.chartImageView?.animationDuration = 3
         self.chartImageView?.animationRepeatCount = 1
@@ -60,7 +60,7 @@ class ChartDetailViewController: UIViewController {
         self.animateButton?.enabled = false
         
         if let components = self.generateRandomData(chartStyle) {
-            let data = chartStyle.associatedType.init(components: components)
+            let data = chartStyle.rawValue.init(components: components)
             self.chartData = data
         }
     }
@@ -85,16 +85,16 @@ class ChartDetailViewController: UIViewController {
     @IBAction private func generateButtonTapped(sender: UIButton) {
         self.chartData = .None
         if let chartStyle = self.chartStyle, let components = self.generateRandomData(chartStyle) {
-            let data = chartStyle.associatedType.init(components: components)
+            let data = chartStyle.rawValue.init(components: components)
             self.chartData = data
         }
     }
     
     private func generateRandomData(style: Chart.Style?) -> [ChartDataComponentType]? {
         guard let style = style else { return .None }
-        let componentType = style.associatedType.componentType
+        let componentType = style.rawValue.componentType
         let componentMaxValue = UInt32(componentType.max ?? 100)
-        let chartMaxNumberComponents = Int(style.associatedType.max ?? 25)
+        let chartMaxNumberComponents = Int(style.rawValue.max ?? 10)
         
         var components: [ChartDataComponentType] = []
         for _ in 0 ..< Int(chartMaxNumberComponents) {
