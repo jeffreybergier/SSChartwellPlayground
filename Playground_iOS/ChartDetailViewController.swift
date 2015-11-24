@@ -19,15 +19,15 @@ class ChartDetailViewController: UIViewController {
     
     private var chartData: ChartDataType? {
         didSet {
+            self.chartStaticImage = .None
+            self.chartAnimatedImages = .None
+            
             if let chartData = self.chartData {
                 let renderer = Chart.Renderer(data: chartData, fontSize: 250)
                 self.chartStaticImage = renderer?.image
                 renderer?.generateAnimatedImagesWithFrameCount(30) { images in
                     self.chartAnimatedImages = images
                 }
-            } else {
-                self.chartStaticImage = .None
-                self.chartAnimatedImages = .None
             }
         }
     }
@@ -117,9 +117,5 @@ class ChartDetailViewController: UIViewController {
         ]
         
         return newComponents
-    }
-    
-    deinit {
-        
     }
 }
