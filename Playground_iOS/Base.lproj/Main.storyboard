@@ -7,7 +7,7 @@
         <!--Chart Detail View Controller-->
         <scene sceneID="XFO-jh-zOc">
             <objects>
-                <viewController id="KXf-xQ-m0f" customClass="ChartDetailViewController" customModule="Playground_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KXf-xQ-m0f" customClass="ChartDetailViewController" customModule="Playground_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nzW-fu-vUB"/>
                         <viewControllerLayoutGuide type="bottom" id="D2o-jl-H8U"/>
@@ -88,26 +88,26 @@
         <!--Playground-->
         <scene sceneID="rbO-SN-aH9">
             <objects>
-                <tableViewController title="Playground" clearsSelectionOnViewWillAppear="NO" id="gT2-Ww-k5s" customClass="ChartListTableViewController" customModule="Playground_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MasterViewController" title="Playground" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="gT2-Ww-k5s" customClass="ChartListTableViewController" customModule="Playground_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="DZ5-LH-WRr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BasicCell" textLabel="PTC-mf-UTM" rowHeight="50" style="IBUITableViewCellStyleDefault" id="sfd-5n-wl3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BasicCell" textLabel="KXg-nA-nOE" rowHeight="50" style="IBUITableViewCellStyleDefault" id="sfd-5n-wl3">
                                 <rect key="frame" x="0.0" y="114" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sfd-5n-wl3" id="oAj-d7-x7P">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Vertical Bars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PTC-mf-UTM">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KXg-nA-nOE">
                                             <rect key="frame" x="15" y="0.0" width="550" height="49"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -134,7 +134,7 @@
         <!--Navigation Controller-->
         <scene sceneID="jun-2K-vfR">
             <objects>
-                <navigationController id="48w-2E-7q2" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MasterVCNavController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="48w-2E-7q2" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uug-4p-8Ph">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -151,7 +151,7 @@
         <!--Split View Controller-->
         <scene sceneID="8v5-Oe-KzJ">
             <objects>
-                <splitViewController id="pUX-3H-lBR" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="MainSplitViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pUX-3H-lBR" sceneMemberID="viewController">
                     <connections>
                         <segue destination="48w-2E-7q2" kind="relationship" relationship="masterViewController" id="TrE-wG-cJ0"/>
                         <segue destination="VEz-v6-BsL" kind="relationship" relationship="detailViewController" id="aul-2a-Zes"/>
@@ -164,7 +164,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gbM-tl-OWu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VEz-v6-BsL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DetailVCNavController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VEz-v6-BsL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uVP-M6-dcA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
