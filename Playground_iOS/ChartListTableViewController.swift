@@ -14,7 +14,7 @@ class ChartListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.splitViewController!.delegate = self
+        self.splitViewController?.delegate = self
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
