@@ -11,6 +11,12 @@ import SSChartwell_iOS
 
 class ChartListTableViewController: UITableViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.splitViewController!.delegate = self
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let navVC = segue.destinationViewController as? UINavigationController,
             let detailVC = navVC.viewControllers.first as? ChartDetailViewController,
@@ -112,3 +118,19 @@ class ChartListTableViewController: UITableViewController {
         case BarsVerticalSegue, LinesSegue, BarsHorizontalSegue, RingsSegue, PiesSegue, RadarSegue, RoseSegue
     }
 }
+
+extension ChartListTableViewController: UISplitViewControllerDelegate {
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        
+        if let secNavController = secondaryViewController as? UINavigationController,
+            let detailVC = secNavController.viewControllers.last as? ChartDetailViewController
+            where detailVC.chartStyle == nil
+        {
+            return true
+        }
+        
+        return false
+    }
+}
+
+
