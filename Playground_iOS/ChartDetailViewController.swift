@@ -23,7 +23,8 @@ class ChartDetailViewController: UIViewController {
             self.chartAnimatedImages = .None
             
             if let chartData = self.chartData {
-                let renderer = Chart.Renderer(data: chartData, fontSize: 250)
+                let fontSize: CGFloat = 250
+                let renderer = Chart.Renderer(data: chartData, fontSize: fontSize)
                 self.chartStaticImage = renderer?.image
                 renderer?.generateAnimatedImagesWithFrameCount(30) { images in
                     self.chartAnimatedImages = images
@@ -92,30 +93,27 @@ class ChartDetailViewController: UIViewController {
     private func generateRandomData(style: Chart.Style?) -> [ChartDataComponentType]? {
         guard let style = style else { return .None }
         let componentType = style.associatedType.componentType
+        let componentMaxValue = UInt32(componentType.max ?? 100)
+        let chartMaxNumberComponents = Int(style.associatedType.max ?? 25)
         
-        let newComponents: [ChartDataComponentType] = [
-            componentType.init(value: 10, color: UIColor.redColor().CGColor),
-            componentType.init(value: 20, color: UIColor.blueColor().CGColor),
-            componentType.init(value: 310, color: UIColor.yellowColor().CGColor),
-            componentType.init(value: 40, color: UIColor.greenColor().CGColor),
-            componentType.init(value: 50, color: UIColor.blackColor().CGColor),
-            componentType.init(value: 60, color: UIColor.grayColor().CGColor),
-            componentType.init(value: 70, color: UIColor.darkGrayColor().CGColor),
-            componentType.init(value: 80, color: UIColor.lightGrayColor().CGColor),
-            componentType.init(value: 90, color: UIColor.cyanColor().CGColor),
-            componentType.init(value: 100, color: UIColor.magentaColor().CGColor),
-            componentType.init(value: 55, color: UIColor.redColor().CGColor),
-            componentType.init(value: 66, color: UIColor.blueColor().CGColor),
-            componentType.init(value: 150, color: UIColor.blackColor().CGColor),
-            componentType.init(value: 89, color: UIColor.grayColor().CGColor),
-            componentType.init(value: 170, color: UIColor.darkGrayColor().CGColor),
-            componentType.init(value: 22, color: UIColor.lightGrayColor().CGColor),
-            componentType.init(value: 12, color: UIColor.cyanColor().CGColor),
-            componentType.init(value: 45, color: UIColor.magentaColor().CGColor),
-            componentType.init(value: 55, color: UIColor.redColor().CGColor),
-            componentType.init(value: 66, color: UIColor.blueColor().CGColor)
-        ]
-        
-        return newComponents
+        var components: [ChartDataComponentType] = []
+        for _ in 0 ..< Int(chartMaxNumberComponents) {
+            let lower : UInt32 = 0
+            let upper : UInt32 = componentMaxValue
+            let value = UInt(arc4random_uniform(upper - lower) + lower)
+            let color = UIColor.randomColor
+            let newComponent = componentType.init(value: value, color: color.CGColor)
+            components.append(newComponent)
+        }
+        return components
+    }
+}
+
+extension UIColor {
+    static var randomColor: UIColor {
+        let red = CGFloat(drand48())
+        let green = CGFloat(drand48())
+        let blue = CGFloat(drand48())
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 }
