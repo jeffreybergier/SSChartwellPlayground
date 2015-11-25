@@ -23,10 +23,24 @@ class ChartDetailViewController: UIViewController {
             self.chartAnimatedImages = .None
             
             if let chartData = self.chartData {
-                let fontSize: CGFloat = 250
+                let fontSize: CGFloat
+                switch chartData.dynamicType.style {
+                case .Bars:
+                    fontSize = 25
+                case .Lines:
+                    fontSize = 100
+                case .BarsVertical:
+                    fontSize = 100
+//                case .Pies:
+//                    fontSize = 100
+                default:
+                    fontSize = 250
+                }
                 let renderer = Chart.Renderer(data: chartData, fontSize: fontSize)
                 self.chartStaticImage = renderer?.image
-                renderer?.generateAnimatedImagesWithFrameCount(30) { images in
+                self.generateButton?.enabled = false
+                renderer?.generateAnimatedImagesWithFrameCount(50) { images in
+                    self.generateButton?.enabled = true
                     self.chartAnimatedImages = images
                 }
             }
@@ -54,7 +68,7 @@ class ChartDetailViewController: UIViewController {
         
         self.title = "\(chartStyle.rawValue)"
         
-        self.chartImageView?.animationDuration = 3
+        self.chartImageView?.animationDuration = 2
         self.chartImageView?.animationRepeatCount = 1
         
         self.animateButton?.enabled = false
@@ -82,7 +96,9 @@ class ChartDetailViewController: UIViewController {
         }
     }
     
-    @IBAction private func generateButtonTapped(sender: UIButton) {
+    @IBAction private func generateButtonTapped(sender: UIButton?) {
+        sender?.enabled = false
+        
         self.chartData = .None
         if let chartStyle = self.chartStyle, let components = self.generateRandomData(chartStyle) {
             let data = chartStyle.rawValue.init(components: components)
@@ -92,20 +108,43 @@ class ChartDetailViewController: UIViewController {
     
     private func generateRandomData(style: Chart.Style?) -> [ChartDataComponentType]? {
         guard let style = style else { return .None }
-        let componentType = style.rawValue.componentType
-        let componentMaxValue = UInt32(componentType.max ?? 100)
-        let chartMaxNumberComponents = Int(style.rawValue.max ?? 10)
         
-        var components: [ChartDataComponentType] = []
-        for _ in 0 ..< Int(chartMaxNumberComponents) {
+        if let _ = style.rawValue as? ChartSumDataType.Type {
+            let componentType = style.rawValue.componentType
+            let chartMaxValue = UInt(style.rawValue.max ?? 10)
+            var componentCount = UInt(0)
+            let lower : UInt32 = 1
+            let upper : UInt32 = 15
+
+            var components: [ChartDataComponentType] = []
+            for _ in 0 ..< 100 {
+                let value = UInt(arc4random_uniform(upper - lower) + lower)
+                if (componentCount + value) <= chartMaxValue {
+                    let color = UIColor.randomColor
+                    let newComponent = componentType.init(value: value, color: color.CGColor)
+                    components.append(newComponent)
+                    componentCount += value
+                } else {
+                    break
+                }
+            }
+            return components
+        } else {
+            let componentType = style.rawValue.componentType
+            let componentMaxValue = UInt32(componentType.max ?? 100)
+            let chartMaxNumberComponents = Int(style.rawValue.max ?? 10)
             let lower : UInt32 = 0
             let upper : UInt32 = componentMaxValue
-            let value = UInt(arc4random_uniform(upper - lower) + lower)
-            let color = UIColor.randomColor
-            let newComponent = componentType.init(value: value, color: color.CGColor)
-            components.append(newComponent)
+            
+            var components: [ChartDataComponentType] = []
+            for _ in 0 ..< Int(chartMaxNumberComponents) {
+                let value = UInt(arc4random_uniform(upper - lower) + lower)
+                let color = UIColor.randomColor
+                let newComponent = componentType.init(value: value, color: color.CGColor)
+                components.append(newComponent)
+            }
+            return components
         }
-        return components
     }
 }
 
