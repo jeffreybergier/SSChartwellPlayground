@@ -114,7 +114,7 @@ class ChartDetailViewController: UIViewController {
             let chartMaxValue = UInt(style.rawValue.max ?? 10)
             var componentCount = UInt(0)
             let lower : UInt32 = 1
-            let upper : UInt32 = 15
+            let upper : UInt32 = 30
 
             var components: [ChartDataComponentType] = []
             for _ in 0 ..< 100 {
