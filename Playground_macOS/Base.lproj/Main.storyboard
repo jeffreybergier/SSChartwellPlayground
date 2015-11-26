@@ -695,6 +695,41 @@
                     <view key="view" id="nxg-6p-V1q">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZp-fR-vjE">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <clipView key="contentView" id="YXV-tn-Swv">
+                                    <rect key="frame" x="1" y="1" width="448" height="298"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="y5N-Yy-XCE">
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="298"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <animations/>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </collectionView>
+                                    </subviews>
+                                    <animations/>
+                                </clipView>
+                                <animations/>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Rg5-vy-C5x">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="r83-ln-bsg">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="XZp-fR-vjE" firstAttribute="leading" secondItem="nxg-6p-V1q" secondAttribute="leading" id="1xC-GB-F7A"/>
+                            <constraint firstAttribute="trailing" secondItem="XZp-fR-vjE" secondAttribute="trailing" id="5Yz-Vl-ihf"/>
+                            <constraint firstAttribute="bottom" secondItem="XZp-fR-vjE" secondAttribute="bottom" id="U2R-AU-f6X"/>
+                            <constraint firstItem="XZp-fR-vjE" firstAttribute="top" secondItem="nxg-6p-V1q" secondAttribute="top" id="vtr-qu-Rfb"/>
+                        </constraints>
                         <animations/>
                     </view>
                 </viewController>
