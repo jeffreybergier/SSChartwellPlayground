@@ -31,8 +31,6 @@ class ChartDetailViewController: UIViewController {
                     fontSize = 100
                 case .BarsVertical:
                     fontSize = 100
-//                case .Pies:
-//                    fontSize = 100
                 default:
                     fontSize = 250
                 }
@@ -108,9 +106,8 @@ class ChartDetailViewController: UIViewController {
     
     private func generateRandomData(style: Chart.Style?) -> [ChartDataComponentType]? {
         guard let style = style else { return .None }
-        
+        let componentType = style.rawValue.componentType
         if let _ = style.rawValue as? ChartSumDataType.Type {
-            let componentType = style.rawValue.componentType
             let chartMaxValue = UInt(style.rawValue.max ?? 10)
             var componentCount = UInt(0)
             let lower : UInt32 = 1
@@ -130,7 +127,6 @@ class ChartDetailViewController: UIViewController {
             }
             return components
         } else {
-            let componentType = style.rawValue.componentType
             let componentMaxValue = UInt32(componentType.max ?? 100)
             let chartMaxNumberComponents = Int(style.rawValue.max ?? 10)
             let lower : UInt32 = 0
