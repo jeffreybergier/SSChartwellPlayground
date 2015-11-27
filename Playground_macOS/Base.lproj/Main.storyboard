@@ -653,19 +653,10 @@
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <toolbar key="toolbar" implicitIdentifier="6FFD46EF-92C4-4990-AE83-B50D533470D2" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="Jcp-aQ-tNk">
-                            <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="0sF-pY-dyT"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="sY7-1S-4fW"/>
-                            </allowedToolbarItems>
-                            <defaultToolbarItems>
-                                <toolbarItem reference="sY7-1S-4fW"/>
-                            </defaultToolbarItems>
-                        </toolbar>
                     </window>
                     <connections>
                         <segue destination="S4C-Hv-pLk" kind="relationship" relationship="window.shadowedContentViewController" id="hz2-LO-nEg"/>
@@ -712,7 +703,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="medium" viewBased="YES" indentationPerLevel="16" outlineTableColumn="mdt-wl-QAy" id="iea-bS-7tl">
-                                            <rect key="frame" x="0.0" y="0.0" width="198" height="298"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="198" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <size key="intercellSpacing" width="3" height="0.0"/>
@@ -865,7 +856,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="NdS-Kq-ZGD">
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" allowsMagnification="YES" maxMagnification="10" minMagnification="1" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdS-Kq-ZGD">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                 <clipView key="contentView" id="mtB-z5-nSG">
                                     <rect key="frame" x="1" y="1" width="448" height="298"/>
@@ -874,10 +865,10 @@
                                         <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07d-5j-xFc">
                                             <rect key="frame" x="0.0" y="36" width="448" height="262"/>
                                             <subviews>
-                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHb-fL-iIG">
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="751" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHb-fL-iIG">
                                                     <rect key="frame" x="199" y="58" width="50" height="204"/>
                                                     <animations/>
-                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="iIY-rZ-1rq"/>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" id="iIY-rZ-1rq"/>
                                                 </imageView>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n87-vP-mLN">
                                                     <rect key="frame" x="179" y="22" width="90" height="32"/>
@@ -923,13 +914,13 @@
                                     <animations/>
                                 </clipView>
                                 <animations/>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="8dT-6m-byt">
-                                    <rect key="frame" x="-100" y="-100" width="448" height="16"/>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="8dT-6m-byt">
+                                    <rect key="frame" x="1" y="283" width="448" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="Svc-IF-rM9">
-                                    <rect key="frame" x="434" y="1" width="15" height="298"/>
+                                    <rect key="frame" x="433" y="1" width="16" height="298"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
@@ -946,7 +937,7 @@
                     <connections>
                         <outlet property="animateButton" destination="n87-vP-mLN" id="I0J-Fu-KoH"/>
                         <outlet property="chartImageView" destination="dHb-fL-iIG" id="4iv-13-uTr"/>
-                        <outlet property="generateButtons" destination="RxB-mw-mR9" id="LRM-2T-0rw"/>
+                        <outlet property="generateButton" destination="RxB-mw-mR9" id="hbR-k6-nij"/>
                     </connections>
                 </viewController>
                 <customObject id="e4O-UZ-32a" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

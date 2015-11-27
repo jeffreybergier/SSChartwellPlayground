@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7370BBEA1C08F963009398CE /* SSChartwell_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */; };
+		7370BBEB1C08F963009398CE /* SSChartwell_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7370BBED1C090603009398CE /* ChartwellRadar.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A8041D1C02893E00C2823E /* ChartwellRadar.ttf */; };
+		7370BBEE1C090603009398CE /* ChartwellRings.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A8041E1C02893E00C2823E /* ChartwellRings.ttf */; };
+		7370BBEF1C090603009398CE /* ChartwellRose.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A8041F1C02893E00C2823E /* ChartwellRose.ttf */; };
+		7370BBF01C090603009398CE /* ChartwellBars.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804201C02893E00C2823E /* ChartwellBars.ttf */; };
+		7370BBF11C090603009398CE /* ChartwellBarsVertical.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804211C02893E00C2823E /* ChartwellBarsVertical.ttf */; };
+		7370BBF21C090603009398CE /* ChartwellLines.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804221C02893E00C2823E /* ChartwellLines.ttf */; };
+		7370BBF31C090603009398CE /* ChartwellPies.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804231C02893E00C2823E /* ChartwellPies.ttf */; };
 		7377F6491C077CBE00459BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7377F6481C077CBE00459BD2 /* AppDelegate.swift */; };
 		7377F64D1C077CBE00459BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7377F64C1C077CBE00459BD2 /* Assets.xcassets */; };
 		7377F6501C077CBE00459BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7377F64E1C077CBE00459BD2 /* Main.storyboard */; };
@@ -30,6 +39,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7370BBEC1C08F965009398CE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7370BBEB1C08F963009398CE /* SSChartwell_macOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		73FCC3881C02CBA900C4F8CC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SSChartwell_macOS.framework; path = "/Users/jeffberg/Library/Developer/Xcode/DerivedData/SSChartwellPlayground-akjnhortmiawkidugmkicwdsavic/Build/Products/Debug/SSChartwell_macOS.framework"; sourceTree = "<absolute>"; };
 		7377F6461C077CBE00459BD2 /* Playground_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7377F6481C077CBE00459BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7377F64C1C077CBE00459BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7370BBEA1C08F963009398CE /* SSChartwell_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +126,7 @@
 		73A803E91C0287B000C2823E = {
 			isa = PBXGroup;
 			children = (
+				7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */,
 				73A803F61C0287C900C2823E /* Playground_iOS */,
 				7377F6471C077CBE00459BD2 /* Playground_macOS */,
 				73A8041C1C02890E00C2823E /* Common */,
@@ -167,6 +190,7 @@
 				7377F6421C077CBE00459BD2 /* Sources */,
 				7377F6431C077CBE00459BD2 /* Frameworks */,
 				7377F6441C077CBE00459BD2 /* Resources */,
+				7370BBEC1C08F965009398CE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,7 +263,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7377F64D1C077CBE00459BD2 /* Assets.xcassets in Resources */,
+				7370BBF01C090603009398CE /* ChartwellBars.ttf in Resources */,
+				7370BBEF1C090603009398CE /* ChartwellRose.ttf in Resources */,
+				7370BBF31C090603009398CE /* ChartwellPies.ttf in Resources */,
+				7370BBED1C090603009398CE /* ChartwellRadar.ttf in Resources */,
 				7377F6501C077CBE00459BD2 /* Main.storyboard in Resources */,
+				7370BBF11C090603009398CE /* ChartwellBarsVertical.ttf in Resources */,
+				7370BBEE1C090603009398CE /* ChartwellRings.ttf in Resources */,
+				7370BBF21C090603009398CE /* ChartwellLines.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +556,7 @@
 				7377F6541C077CBE00459BD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73A803ED1C0287B000C2823E /* Build configuration list for PBXProject "SSChartwellPlayground" */ = {
 			isa = XCConfigurationList;

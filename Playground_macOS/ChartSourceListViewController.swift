@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SSChartwell_macOS
 
 class ChartSourceListViewController: NSViewController {
     
@@ -32,18 +33,56 @@ class ChartSourceListViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.3 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
-            self.tableView?.expandItem(.None, expandChildren: true)
-        }
-        
         self.parentViewController?.childViewControllers.forEach() { vc in
             if let vc = vc as? ChartDetailViewController {
                 self.detailViewController = vc
             }
         }
+        
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.3 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            self.tableView?.expandItem(.None, expandChildren: true)
+            self.tableView?.selectRowIndexes(NSIndexSet(index: 1), byExtendingSelection: false)
+        }
     }
     
+}
+
+extension ChartSourceListViewController: NSOutlineViewDelegate {
+    
+    func outlineViewSelectionDidChange(notification: NSNotification) {
+        if let selectedIndex = self.tableView?.selectedRowIndexes.firstIndex,
+            let item = ((self.tableView?.itemAtRow(selectedIndex) as? NSDictionary)?["Item"] as? String) {
+                switch item {
+                case "Rings":
+                    self.detailViewController?.chartStyle = .Rings
+                case "Pies":
+                    self.detailViewController?.chartStyle = .Pies
+                case "Radar":
+                    self.detailViewController?.chartStyle = .Radar
+                case "Rose":
+                    self.detailViewController?.chartStyle = .Rose
+                case "Vertical Bars":
+                    self.detailViewController?.chartStyle = .BarsVertical
+                case "Horizontal Bars":
+                    self.detailViewController?.chartStyle = .Bars
+                case "Lines":
+                    self.detailViewController?.chartStyle = .Lines
+                default:
+                    break
+                }
+        }
+    }
+    
+    func outlineView(outlineView: NSOutlineView, shouldSelectItem item: AnyObject) -> Bool {
+        let dictionary = (item as? NSDictionary)
+        if let _ = dictionary?["Header"] as? String {
+            return false
+        } else if let _ = dictionary?["Item"] as? String {
+            return true
+        }
+        fatalError()
+    }
 }
 
 extension ChartSourceListViewController: NSOutlineViewDataSource {
