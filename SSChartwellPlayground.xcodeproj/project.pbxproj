@@ -65,14 +65,14 @@
 
 /* Begin PBXFileReference section */
 		7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SSChartwell_macOS.framework; path = "/Users/jeffberg/Library/Developer/Xcode/DerivedData/SSChartwellPlayground-akjnhortmiawkidugmkicwdsavic/Build/Products/Debug/SSChartwell_macOS.framework"; sourceTree = "<absolute>"; };
-		7377F6461C077CBE00459BD2 /* Playground_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7377F6461C077CBE00459BD2 /* SSChartwell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSChartwell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7377F6481C077CBE00459BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7377F64C1C077CBE00459BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7377F64F1C077CBE00459BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7377F6511C077CBE00459BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7377F6551C08B42000459BD2 /* ChartDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDetailViewController.swift; sourceTree = "<group>"; };
 		7377F6571C08B46400459BD2 /* ChartSourceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartSourceListViewController.swift; sourceTree = "<group>"; };
-		73A803F41C0287C900C2823E /* Playground_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73A803F41C0287C900C2823E /* SSChartwell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSChartwell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A803F71C0287C900C2823E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73A803FC1C0287C900C2823E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73A803FE1C0287C900C2823E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +119,7 @@
 				7377F64C1C077CBE00459BD2 /* Assets.xcassets */,
 				7377F64E1C077CBE00459BD2 /* Main.storyboard */,
 				7377F6511C077CBE00459BD2 /* Info.plist */,
+				7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */,
 			);
 			path = Playground_macOS;
 			sourceTree = "<group>";
@@ -126,7 +127,6 @@
 		73A803E91C0287B000C2823E = {
 			isa = PBXGroup;
 			children = (
-				7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */,
 				73A803F61C0287C900C2823E /* Playground_iOS */,
 				7377F6471C077CBE00459BD2 /* Playground_macOS */,
 				73A8041C1C02890E00C2823E /* Common */,
@@ -137,8 +137,8 @@
 		73A803F51C0287C900C2823E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				73A803F41C0287C900C2823E /* Playground_iOS.app */,
-				7377F6461C077CBE00459BD2 /* Playground_macOS.app */,
+				73A803F41C0287C900C2823E /* SSChartwell.app */,
+				7377F6461C077CBE00459BD2 /* SSChartwell.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 			);
 			name = Playground_macOS;
 			productName = Playground_macOS;
-			productReference = 7377F6461C077CBE00459BD2 /* Playground_macOS.app */;
+			productReference = 7377F6461C077CBE00459BD2 /* SSChartwell.app */;
 			productType = "com.apple.product-type.application";
 		};
 		73A803F31C0287C900C2823E /* Playground_iOS */ = {
@@ -216,7 +216,7 @@
 			);
 			name = Playground_iOS;
 			productName = Playground_iOS;
-			productReference = 73A803F41C0287C900C2823E /* Playground_iOS.app */;
+			productReference = 73A803F41C0287C900C2823E /* SSChartwell.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -388,7 +388,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.Playground-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SSChartwell;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -431,7 +431,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.Playground-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SSChartwell;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -494,7 +494,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.Playground-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SSChartwell;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,7 +539,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.Playground-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SSChartwell;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

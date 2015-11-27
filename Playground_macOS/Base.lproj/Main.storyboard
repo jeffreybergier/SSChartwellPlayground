@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
@@ -643,7 +644,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Playground_macOS" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SSChartwell" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="-36"/>
@@ -691,7 +692,7 @@
         <!--Chart Source List View Controller-->
         <scene sceneID="Dgq-FJ-4Bj">
             <objects>
-                <viewController id="9gq-1P-fqr" customClass="ChartSourceListViewController" customModule="Playground_macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9gq-1P-fqr" customClass="ChartSourceListViewController" customModule="SSChartwell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="nxg-6p-V1q">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -851,7 +852,7 @@
         <!--Chart Detail View Controller-->
         <scene sceneID="rb7-q1-9bi">
             <objects>
-                <viewController id="yyg-rt-eJw" customClass="ChartDetailViewController" customModule="Playground_macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yyg-rt-eJw" customClass="ChartDetailViewController" customModule="SSChartwell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="EBO-CU-GgC">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -862,11 +863,11 @@
                                     <rect key="frame" x="1" y="1" width="448" height="298"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07d-5j-xFc">
-                                            <rect key="frame" x="0.0" y="36" width="448" height="262"/>
+                                        <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07d-5j-xFc">
+                                            <rect key="frame" x="0.0" y="220" width="448" height="58"/>
                                             <subviews>
-                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="751" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHb-fL-iIG">
-                                                    <rect key="frame" x="199" y="58" width="50" height="204"/>
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="dHb-fL-iIG">
+                                                    <rect key="frame" x="224" y="58" width="0.0" height="0.0"/>
                                                     <animations/>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" id="iIY-rZ-1rq"/>
                                                 </imageView>
@@ -925,11 +926,93 @@
                                     <animations/>
                                 </scroller>
                             </scrollView>
+                            <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qyO-Oa-AsV">
+                                <rect key="frame" x="20" y="20" width="88" height="41"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="nja-fm-6OJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="41"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZgN-rg-tVV">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="41"/>
+                                                <animations/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSRevealFreestandingTemplate" id="Rhf-ea-j6g"/>
+                                            </imageView>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eYs-Dc-ROP">
+                                                <rect key="frame" x="0.0" y="-1" width="30" height="42"/>
+                                                <animations/>
+                                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="eON-OK-Wc6">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="magnifyingGlassButtonClicked:" target="yyg-rt-eJw" id="STb-xK-e01"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="eYs-Dc-ROP" firstAttribute="centerX" secondItem="ZgN-rg-tVV" secondAttribute="centerX" id="2KV-VO-Q7F"/>
+                                            <constraint firstItem="eYs-Dc-ROP" firstAttribute="width" secondItem="ZgN-rg-tVV" secondAttribute="width" id="5rs-5l-VNZ"/>
+                                            <constraint firstItem="ZgN-rg-tVV" firstAttribute="top" secondItem="nja-fm-6OJ" secondAttribute="top" id="7ua-xr-mqB"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZgN-rg-tVV" secondAttribute="trailing" id="DjY-nh-BDf"/>
+                                            <constraint firstItem="eYs-Dc-ROP" firstAttribute="centerY" secondItem="ZgN-rg-tVV" secondAttribute="centerY" id="KeH-QM-gEV"/>
+                                            <constraint firstItem="eYs-Dc-ROP" firstAttribute="height" secondItem="ZgN-rg-tVV" secondAttribute="height" id="Ram-Qt-IAu"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZgN-rg-tVV" secondAttribute="bottom" id="cas-3D-41K"/>
+                                            <constraint firstItem="ZgN-rg-tVV" firstAttribute="leading" secondItem="nja-fm-6OJ" secondAttribute="leading" id="e5F-tf-xU5"/>
+                                        </constraints>
+                                        <animations/>
+                                    </customView>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zop-nd-HGa">
+                                        <rect key="frame" x="34" y="10" width="25" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="E6x-sz-y79"/>
+                                            <constraint firstAttribute="height" constant="20" id="UtC-Yr-jiT"/>
+                                        </constraints>
+                                        <animations/>
+                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EAL-ad-SSd">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="zoomInButtonClicked:" target="yyg-rt-eJw" id="uno-Eu-YQ9"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6xK-FM-enz">
+                                        <rect key="frame" x="63" y="10" width="25" height="22"/>
+                                        <animations/>
+                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5zy-9h-eY6">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="zoomOutButtonClicked:" target="yyg-rt-eJw" id="T5U-RS-bxl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="6xK-FM-enz" firstAttribute="width" secondItem="zop-nd-HGa" secondAttribute="width" id="6ep-eF-40h"/>
+                                    <constraint firstItem="6xK-FM-enz" firstAttribute="height" secondItem="zop-nd-HGa" secondAttribute="height" id="C7U-DF-dfs"/>
+                                    <constraint firstItem="nja-fm-6OJ" firstAttribute="width" secondItem="zop-nd-HGa" secondAttribute="width" multiplier="1.2" id="Ngo-Qr-u9t"/>
+                                    <constraint firstItem="nja-fm-6OJ" firstAttribute="height" secondItem="zop-nd-HGa" secondAttribute="height" multiplier="2" constant="1" id="gYS-9j-FtQ"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="NdS-Kq-ZGD" firstAttribute="top" secondItem="EBO-CU-GgC" secondAttribute="top" id="B5I-lo-xV9"/>
+                            <constraint firstAttribute="bottom" secondItem="qyO-Oa-AsV" secondAttribute="bottom" constant="20" symbolic="YES" id="FGq-CC-49n"/>
                             <constraint firstAttribute="bottom" secondItem="NdS-Kq-ZGD" secondAttribute="bottom" id="c3t-gX-tKV"/>
                             <constraint firstAttribute="trailing" secondItem="NdS-Kq-ZGD" secondAttribute="trailing" id="eld-00-yrL"/>
+                            <constraint firstItem="qyO-Oa-AsV" firstAttribute="leading" secondItem="EBO-CU-GgC" secondAttribute="leading" constant="20" symbolic="YES" id="taQ-us-dod"/>
                             <constraint firstItem="NdS-Kq-ZGD" firstAttribute="leading" secondItem="EBO-CU-GgC" secondAttribute="leading" id="zmH-ID-IR2"/>
                         </constraints>
                         <animations/>
@@ -938,6 +1021,7 @@
                         <outlet property="animateButton" destination="n87-vP-mLN" id="I0J-Fu-KoH"/>
                         <outlet property="chartImageView" destination="dHb-fL-iIG" id="4iv-13-uTr"/>
                         <outlet property="generateButton" destination="RxB-mw-mR9" id="hbR-k6-nij"/>
+                        <outlet property="scrollView" destination="NdS-Kq-ZGD" id="UpV-YD-vTC"/>
                     </connections>
                 </viewController>
                 <customObject id="e4O-UZ-32a" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -947,5 +1031,8 @@
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+        <image name="NSRevealFreestandingTemplate" width="14" height="14"/>
     </resources>
 </document>
