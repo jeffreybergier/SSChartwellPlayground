@@ -11,6 +11,23 @@ import Cocoa
 class ChartSourceListViewController: NSViewController {
     
     @IBOutlet private weak var tableView: NSOutlineView?
+    private weak var detailViewController: ChartDetailViewController?
+    
+    private let data: [[[String : String]]] = [
+        [
+            ["Header" : "Horizontal Charts"],
+            ["Item" : "Vertical Bars"],
+            ["Item" : "Horizontal Bars"],
+            ["Item" : "Lines"]
+        ],
+        [
+            ["Header" : "Circular Charts"],
+            ["Item" : "Rings"],
+            ["Item" : "Pies"],
+            ["Item" : "Radar"],
+            ["Item" : "Rose"]
+        ]
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +35,12 @@ class ChartSourceListViewController: NSViewController {
         let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.3 * Double(NSEC_PER_SEC)))
         dispatch_after(delayTime, dispatch_get_main_queue()) {
             self.tableView?.expandItem(.None, expandChildren: true)
+        }
+        
+        self.parentViewController?.childViewControllers.forEach() { vc in
+            if let vc = vc as? ChartDetailViewController {
+                self.detailViewController = vc
+            }
         }
     }
     
@@ -27,14 +50,14 @@ extension ChartSourceListViewController: NSOutlineViewDataSource {
     func outlineView(outlineView: NSOutlineView, numberOfChildrenOfItem item: AnyObject?) -> Int {
         if let item = item  {
             if let header = (item as? NSDictionary)?["Header"] as? String {
-                if header == "Circular Charts" {
-                    return 4
-                } else if header == "Horizontal Charts" {
-                    return 3
+                if header == self.data[1][0]["Header"] {
+                    return self.data[1].count - 1
+                } else if header == self.data[0][0]["Header"] {
+                    return self.data[0].count - 1
                 }
             }
         } else {
-            return 2
+            return self.data.count
         }
         fatalError()
     }
@@ -52,41 +75,14 @@ extension ChartSourceListViewController: NSOutlineViewDataSource {
     func outlineView(outlineView: NSOutlineView, child index: Int, ofItem item: AnyObject?) -> AnyObject {
         if let item = item  {
             if let header = (item as? NSDictionary)?["Header"] as? String {
-                if header == "Circular Charts" {
-                    switch index {
-                    case 0:
-                        return ["Item" : "Rings"]
-                    case 1:
-                        return ["Item" : "Pies"]
-                    case 2:
-                        return ["Item" : "Radar"]
-                    case 3:
-                        return ["Item" : "Rose"]
-                    default:
-                        fatalError()
-                    }
-                } else if header == "Horizontal Charts" {
-                    switch index {
-                    case 0:
-                        return ["Item" : "Vertical Bars"]
-                    case 1:
-                        return ["Item" : "Horizontal Bars"]
-                    case 2:
-                        return ["Item" : "Lines"]
-                    default:
-                        fatalError()
-                    }
+                if header == self.data[1][0]["Header"] {
+                    return self.data[1][index + 1]
+                } else if header == self.data[0][0]["Header"] {
+                    return self.data[0][index + 1]
                 }
             }
         } else {
-            switch index {
-            case 0:
-                return ["Header" : "Horizontal Charts"]
-            case 1:
-                return ["Header" : "Circular Charts"]
-            default:
-                fatalError()
-            }
+            return self.data[index][0]
         }
         fatalError()
     }
