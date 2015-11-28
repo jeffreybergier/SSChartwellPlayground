@@ -857,48 +857,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" allowsMagnification="YES" maxMagnification="20" minMagnification="1" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6o-EO-woS">
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" allowsMagnification="YES" maxMagnification="10" minMagnification="1" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUO-n4-Qpp">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                <clipView key="contentView" id="Cvd-Jj-dHt">
+                                <clipView key="contentView" id="Wf4-PT-9on">
                                     <rect key="frame" x="1" y="1" width="448" height="298"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQD-Gj-Bt6">
+                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="8Q3-W2-WBm">
                                             <rect key="frame" x="0.0" y="0.0" width="448" height="298"/>
                                             <subviews>
-                                                <imageView horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Ina-Me-eBp">
+                                                <imageView horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lhN-kz-Sx4">
                                                     <rect key="frame" x="0.0" y="0.0" width="448" height="298"/>
                                                     <animations/>
-                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="F2u-Ix-dsL"/>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" id="rqH-yH-J0t"/>
                                                 </imageView>
                                             </subviews>
-                                            <animations/>
                                             <constraints>
-                                                <constraint firstItem="Ina-Me-eBp" firstAttribute="centerX" secondItem="WQD-Gj-Bt6" secondAttribute="centerX" id="p52-QX-zBn"/>
+                                                <constraint firstAttribute="trailing" secondItem="lhN-kz-Sx4" secondAttribute="trailing" id="10I-gz-jj3"/>
+                                                <constraint firstItem="lhN-kz-Sx4" firstAttribute="top" secondItem="8Q3-W2-WBm" secondAttribute="top" id="OfB-NE-Gsm"/>
+                                                <constraint firstItem="lhN-kz-Sx4" firstAttribute="leading" secondItem="8Q3-W2-WBm" secondAttribute="leading" id="cE8-Px-1wS"/>
+                                                <constraint firstAttribute="bottom" secondItem="lhN-kz-Sx4" secondAttribute="bottom" id="hzQ-9I-IlP"/>
+                                                <constraint firstItem="lhN-kz-Sx4" firstAttribute="centerX" secondItem="8Q3-W2-WBm" secondAttribute="centerX" id="rOs-vS-wOx"/>
+                                                <constraint firstItem="lhN-kz-Sx4" firstAttribute="centerY" secondItem="8Q3-W2-WBm" secondAttribute="centerY" id="zTi-wh-srs"/>
                                             </constraints>
-                                            <visibilityPriorities>
-                                                <integer value="1000"/>
-                                            </visibilityPriorities>
-                                            <customSpacing>
-                                                <real value="3.4028234663852886e+38"/>
-                                            </customSpacing>
-                                        </stackView>
+                                            <animations/>
+                                        </customView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="WQD-Gj-Bt6" secondAttribute="bottom" id="3lH-QG-mdY"/>
-                                        <constraint firstItem="WQD-Gj-Bt6" firstAttribute="top" secondItem="Cvd-Jj-dHt" secondAttribute="top" id="58g-3F-NkT"/>
-                                        <constraint firstItem="WQD-Gj-Bt6" firstAttribute="leading" secondItem="Cvd-Jj-dHt" secondAttribute="leading" id="Ldi-Y0-n7B"/>
-                                        <constraint firstAttribute="trailing" secondItem="WQD-Gj-Bt6" secondAttribute="trailing" id="ZSC-OS-iVt"/>
+                                        <constraint firstAttribute="bottom" secondItem="8Q3-W2-WBm" secondAttribute="bottom" id="N0j-M7-kzv"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Q3-W2-WBm" secondAttribute="trailing" id="Wic-fd-Qa7"/>
+                                        <constraint firstItem="8Q3-W2-WBm" firstAttribute="top" secondItem="Wf4-PT-9on" secondAttribute="top" id="aka-y7-WwO"/>
+                                        <constraint firstItem="8Q3-W2-WBm" firstAttribute="leading" secondItem="Wf4-PT-9on" secondAttribute="leading" id="pQ4-Ha-GnT"/>
                                     </constraints>
                                     <animations/>
                                 </clipView>
                                 <animations/>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="u3w-W2-y9d">
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="h4U-JO-KxP">
                                     <rect key="frame" x="1" y="283" width="448" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="71O-Vr-ZmU">
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="IcX-HA-4H7">
                                     <rect key="frame" x="433" y="1" width="16" height="298"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
@@ -1022,25 +1021,27 @@
                             </stackView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="LUO-n4-Qpp" firstAttribute="top" secondItem="EBO-CU-GgC" secondAttribute="top" id="4UE-kA-n00"/>
                             <constraint firstItem="vhf-7W-A20" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EBO-CU-GgC" secondAttribute="top" constant="20" symbolic="YES" id="5qk-GG-1Mv"/>
                             <constraint firstAttribute="bottom" secondItem="vhf-7W-A20" secondAttribute="bottom" constant="20" symbolic="YES" id="C3U-i6-a2g"/>
-                            <constraint firstItem="vhf-7W-A20" firstAttribute="centerX" secondItem="EBO-CU-GgC" secondAttribute="centerX" id="EI5-xE-ge7"/>
+                            <constraint firstItem="vhf-7W-A20" firstAttribute="centerX" secondItem="EBO-CU-GgC" secondAttribute="centerX" priority="250" id="EI5-xE-ge7"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vhf-7W-A20" secondAttribute="trailing" constant="20" symbolic="YES" id="Egq-ra-G3n"/>
                             <constraint firstAttribute="bottom" secondItem="qyO-Oa-AsV" secondAttribute="bottom" constant="20" symbolic="YES" id="FGq-CC-49n"/>
-                            <constraint firstItem="s6o-EO-woS" firstAttribute="leading" secondItem="EBO-CU-GgC" secondAttribute="leading" id="Sdf-Fe-d9S"/>
-                            <constraint firstAttribute="bottom" secondItem="s6o-EO-woS" secondAttribute="bottom" id="b6k-zM-Gi7"/>
+                            <constraint firstAttribute="bottom" secondItem="LUO-n4-Qpp" secondAttribute="bottom" id="UTl-V3-Pgk"/>
                             <constraint firstItem="vhf-7W-A20" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qyO-Oa-AsV" secondAttribute="trailing" constant="8" symbolic="YES" id="nh8-oG-xup"/>
-                            <constraint firstItem="s6o-EO-woS" firstAttribute="top" secondItem="EBO-CU-GgC" secondAttribute="top" id="oOQ-3R-oke"/>
+                            <constraint firstAttribute="trailing" secondItem="LUO-n4-Qpp" secondAttribute="trailing" id="qMU-uq-MdG"/>
                             <constraint firstItem="qyO-Oa-AsV" firstAttribute="leading" secondItem="EBO-CU-GgC" secondAttribute="leading" constant="20" symbolic="YES" id="taQ-us-dod"/>
-                            <constraint firstAttribute="trailing" secondItem="s6o-EO-woS" secondAttribute="trailing" id="vLX-zL-g0w"/>
+                            <constraint firstItem="LUO-n4-Qpp" firstAttribute="leading" secondItem="EBO-CU-GgC" secondAttribute="leading" id="vDl-Mv-nJl"/>
                         </constraints>
                         <animations/>
                     </view>
                     <connections>
                         <outlet property="animateButton" destination="apH-QW-EGi" id="MaM-m5-ipz"/>
-                        <outlet property="chartImageScrollView" destination="s6o-EO-woS" id="2Ma-PD-G0G"/>
-                        <outlet property="chartImageView" destination="Ina-Me-eBp" id="xGk-lo-FxE"/>
+                        <outlet property="chartImageScrollView" destination="LUO-n4-Qpp" id="bKH-2c-UW2"/>
+                        <outlet property="chartImageView" destination="lhN-kz-Sx4" id="kem-u0-eI1"/>
                         <outlet property="generateButton" destination="raM-VP-txj" id="EJF-B0-q8l"/>
+                        <outlet property="zoomInButton" destination="zop-nd-HGa" id="SW1-WZ-akd"/>
+                        <outlet property="zoomOutButton" destination="6xK-FM-enz" id="6MJ-EW-e4n"/>
                     </connections>
                 </viewController>
                 <customObject id="e4O-UZ-32a" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
