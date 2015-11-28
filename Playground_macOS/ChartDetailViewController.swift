@@ -14,7 +14,7 @@ class ChartDetailViewController: NSViewController {
     @IBOutlet private weak var animateButton: NSButton?
     @IBOutlet private weak var chartImageView: NSImageView?
     @IBOutlet private weak var generateButton: NSButton?
-    @IBOutlet private weak var scrollView: NSScrollView?
+    @IBOutlet private weak var chartImageScrollView: NSScrollView?
     
     var chartStyle: Chart.Style? {
         didSet {
@@ -71,18 +71,18 @@ class ChartDetailViewController: NSViewController {
     }
     
     @IBAction func magnifyingGlassButtonClicked(sender: NSButton?) {
-        self.scrollView?.magnification = 1.0
+        self.chartImageScrollView?.magnification = 1.0
     }
     
     @IBAction func zoomOutButtonClicked(sender: NSButton?) {
-        guard let scrollView = self.scrollView else { return }
+        guard let scrollView = self.chartImageScrollView else { return }
         let originalZoom = scrollView.magnification
         let newMagnification = originalZoom - (originalZoom * 0.5)
         scrollView.magnification = newMagnification
     }
     
     @IBAction func zoomInButtonClicked(sender: NSButton?) {
-        guard let scrollView = self.scrollView else { return }
+        guard let scrollView = self.chartImageScrollView else { return }
         let originalZoom = scrollView.magnification
         let newMagnification = originalZoom + (originalZoom * 0.5)
         scrollView.magnification = newMagnification
