@@ -101,7 +101,7 @@ extension ChartSourceListViewController: NSOutlineViewDelegate {
         } else if let _ = dictionary?["Item"] as? String {
             return true
         }
-        fatalError()
+        return true
     }
 }
 
@@ -118,7 +118,7 @@ extension ChartSourceListViewController: NSOutlineViewDataSource {
         } else {
             return self.data.count
         }
-        fatalError()
+        return 0
     }
     
     func outlineView(outlineView: NSOutlineView, isItemExpandable item: AnyObject) -> Bool {
@@ -128,7 +128,7 @@ extension ChartSourceListViewController: NSOutlineViewDataSource {
         } else if let _ = dictionary?["Item"] as? String {
             return false
         }
-        fatalError()
+        return false
     }
     
     func outlineView(outlineView: NSOutlineView, child index: Int, ofItem item: AnyObject?) -> AnyObject {
@@ -143,7 +143,7 @@ extension ChartSourceListViewController: NSOutlineViewDataSource {
         } else {
             return self.data[index][0]
         }
-        fatalError()
+        return [""]
     }
     
     func outlineView(outlineView: NSOutlineView, viewForTableColumn tableColumn: NSTableColumn?, item: AnyObject) -> NSView? {
@@ -151,13 +151,13 @@ extension ChartSourceListViewController: NSOutlineViewDataSource {
         if let value = dictionary?["Header"] as? String {
             let cell = outlineView.makeViewWithIdentifier("HeaderCell", owner: outlineView) as? NSTableCellView
             cell?.textField?.stringValue = value
-            return cell!
+            return cell
         } else if let value = dictionary?["Item"] as? String {
             let cell = outlineView.makeViewWithIdentifier("DataCell", owner: outlineView) as? NSTableCellView
             cell?.textField?.stringValue = value
-            return cell!
+            return cell
         }
-        fatalError()
+        return .None
     }
     
     func outlineView(outlineView: NSOutlineView, objectValueForTableColumn tableColumn: NSTableColumn?, byItem item: AnyObject?) -> AnyObject? {
