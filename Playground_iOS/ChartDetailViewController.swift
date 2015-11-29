@@ -49,8 +49,6 @@ class ChartDetailViewController: UIViewController {
                     fontSize = 25
                 case .Lines:
                     fontSize = 100
-                case .BarsVertical:
-                    fontSize = 100
                 default:
                     fontSize = 250
                 }
