@@ -2,12 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pUX-3H-lBR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Chart Detail View Controller-->
         <scene sceneID="XFO-jh-zOc">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KXf-xQ-m0f" customClass="ChartDetailViewController" customModule="Playground_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KXf-xQ-m0f" customClass="ChartDetailViewController" customModule="SSChartwell" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nzW-fu-vUB"/>
                         <viewControllerLayoutGuide type="bottom" id="D2o-jl-H8U"/>
@@ -22,7 +23,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bhq-ch-mjn">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4v-Q7-IPg">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4v-Q7-IPg">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="10"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,7 +31,7 @@
                                                     <constraint firstAttribute="height" constant="10" id="ziT-Ed-Q0R"/>
                                                 </constraints>
                                             </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="253" verticalHuggingPriority="253" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KcD-FL-2Xj">
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="253" verticalHuggingPriority="253" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="KcD-FL-2Xj">
                                                 <rect key="frame" x="0.0" y="10" width="600" height="500"/>
                                                 <animations/>
                                             </imageView>
@@ -96,7 +97,7 @@
         <!--Playground-->
         <scene sceneID="rbO-SN-aH9">
             <objects>
-                <tableViewController storyboardIdentifier="MasterViewController" title="Playground" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="gT2-Ww-k5s" customClass="ChartListTableViewController" customModule="Playground_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MasterViewController" title="Playground" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="gT2-Ww-k5s" customClass="ChartListTableViewController" customModule="SSChartwell" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="DZ5-LH-WRr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,6 +139,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4m-yg-RU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1482" y="-146"/>
+        </scene>
+        <!--MIT License-->
+        <scene sceneID="sRX-zo-56G">
+            <objects>
+                <viewController title="MIT License" id="CjA-Bc-riS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RW4-Ml-ArH"/>
+                        <viewControllerLayoutGuide type="bottom" id="zyd-5j-Gww"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2cO-UH-eJd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GMg-7T-Lwr">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">// // Created by Jeffrey Bergier on 11/23/15. //
+//  Copyright © 2015 Jeffrey Bergier.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+//
+//</mutableString>
+                                <color key="textColor" red="0.0" green="0.46786099137931025" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GMg-7T-Lwr" firstAttribute="leading" secondItem="2cO-UH-eJd" secondAttribute="leadingMargin" id="77Z-D2-AnA"/>
+                            <constraint firstItem="zyd-5j-Gww" firstAttribute="top" secondItem="GMg-7T-Lwr" secondAttribute="bottom" id="9Fn-oi-j54"/>
+                            <constraint firstItem="GMg-7T-Lwr" firstAttribute="top" secondItem="RW4-Ml-ArH" secondAttribute="bottom" id="F8Q-hL-cky"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GMg-7T-Lwr" secondAttribute="trailing" id="UE9-Qd-YON"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyX-X4-96c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="-981"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jun-2K-vfR">

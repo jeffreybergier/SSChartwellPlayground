@@ -667,6 +667,59 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="avj-vh-F4N">
+            <objects>
+                <viewController id="wpf-2f-Nix" sceneMemberID="viewController">
+                    <view key="view" id="nXP-cc-Z0Y">
+                        <rect key="frame" x="0.0" y="0.0" width="595" height="408"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KQn-Nl-AIJ">
+                                <rect key="frame" x="-2" y="0.0" width="599" height="408"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="dbg-pa-QCj">
+                                    <font key="font" metaFont="system"/>
+                                    <mutableString key="title">// // Created by Jeffrey Bergier on 11/23/15. //
+//  Copyright © 2015 Jeffrey Bergier.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
+//
+//</mutableString>
+                                    <color key="textColor" red="0.0" green="0.46786099139999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KQn-Nl-AIJ" secondAttribute="bottom" id="F6T-4c-Jea"/>
+                            <constraint firstItem="KQn-Nl-AIJ" firstAttribute="leading" secondItem="nXP-cc-Z0Y" secondAttribute="leading" id="JGP-T8-ph0"/>
+                            <constraint firstAttribute="trailing" secondItem="KQn-Nl-AIJ" secondAttribute="trailing" id="QbS-wv-DXO"/>
+                            <constraint firstItem="KQn-Nl-AIJ" firstAttribute="top" secondItem="nXP-cc-Z0Y" secondAttribute="top" id="R6y-W6-zXe"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="XaJ-Rd-yWB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="-333"/>
+        </scene>
         <!--Split View Controller-->
         <scene sceneID="wXo-z5-iKU">
             <objects>
@@ -821,8 +874,8 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ufK-g6-ntE"/>
                                 </constraints>
                                 <animations/>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="npV-eh-jDI">
-                                    <rect key="frame" x="1" y="119" width="238" height="15"/>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="npV-eh-jDI">
+                                    <rect key="frame" x="1" y="283" width="198" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
@@ -898,7 +951,7 @@
                                     <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="IcX-HA-4H7">
-                                    <rect key="frame" x="433" y="1" width="16" height="298"/>
+                                    <rect key="frame" x="434" y="1" width="15" height="298"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
