@@ -670,7 +670,7 @@
         <!--View Controller-->
         <scene sceneID="avj-vh-F4N">
             <objects>
-                <viewController id="wpf-2f-Nix" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MITLICENSE" id="wpf-2f-Nix" sceneMemberID="viewController">
                     <view key="view" id="nXP-cc-Z0Y">
                         <rect key="frame" x="0.0" y="0.0" width="595" height="408"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -680,7 +680,7 @@
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="dbg-pa-QCj">
                                     <font key="font" metaFont="system"/>
-                                    <mutableString key="title">// // Created by Jeffrey Bergier on 11/23/15. //
+                                    <string key="title">// // Created by Jeffrey Bergier on 11/23/15. //
 //  Copyright © 2015 Jeffrey Bergier.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -701,7 +701,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 //
-//</mutableString>
+//</string>
                                     <color key="textColor" red="0.0" green="0.46786099139999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -874,7 +874,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ufK-g6-ntE"/>
                                 </constraints>
                                 <animations/>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="npV-eh-jDI">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="npV-eh-jDI">
                                     <rect key="frame" x="1" y="283" width="198" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
@@ -951,7 +951,7 @@
                                     <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="IcX-HA-4H7">
-                                    <rect key="frame" x="434" y="1" width="15" height="298"/>
+                                    <rect key="frame" x="433" y="1" width="16" height="298"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>

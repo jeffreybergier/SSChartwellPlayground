@@ -83,6 +83,7 @@ class ChartDetailViewController: NSViewController {
                 default:
                     fontSize = 300
                 }
+                
                 let renderer = Chart.Renderer(data: chartData, fontSize: fontSize)
                 self.chartStaticImage = renderer?.PDFImage
                 self.animateButton?.enabled = false
@@ -103,8 +104,6 @@ class ChartDetailViewController: NSViewController {
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "scrollViewBoundsDidChange:", name: NSScrollViewDidEndLiveScrollNotification, object: scrollView)
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "scrollViewBoundsDidChange:", name: NSScrollViewDidEndLiveMagnifyNotification, object: scrollView)
             
-        } else {
-            fatalError()
         }
         
         self.animateButton?.title = "Animate!"
