@@ -21,10 +21,9 @@ class ChartDetailViewController: NSViewController {
     var chartStyle: Chart.Style? {
         didSet {
             guard let chartStyle = self.chartStyle else { return }
-            if let components = self.generateRandomData(chartStyle) {
-                let data = chartStyle.rawValue.init(components: components)
-                self.chartData = data
-            }
+            let components = chartStyle.rawValue.generateRandomData()
+            let data = chartStyle.rawValue.init(components: components)
+            self.chartData = data
         }
     }
     
@@ -81,7 +80,6 @@ class ChartDetailViewController: NSViewController {
         super.viewDidLoad()
         
         if let scrollView = self.chartImageScrollView {
-            //NSNotificationCenter.defaultCenter().addObserver(self, selector: "scrollViewBoundsDidChange:", name: .None, object: scrollView)
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "scrollViewBoundsDidChange:", name: NSScrollViewDidEndLiveScrollNotification, object: scrollView)
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "scrollViewBoundsDidChange:", name: NSScrollViewDidEndLiveMagnifyNotification, object: scrollView)
             
@@ -146,55 +144,5 @@ extension ChartDetailViewController {
     
     @objc private func scrollViewBoundsDidChange(aNotification: NSNotification?) {
         self.scrollViewDidChange()
-    }
-}
-
-extension ChartDetailViewController {
-    private func generateRandomData(style: Chart.Style?) -> [ChartDataComponentType]? {
-        guard let style = style else { return .None }
-        let componentType = style.rawValue.componentType
-        if let _ = style.rawValue as? ChartSumDataType.Type {
-            let chartMaxValue = UInt(style.rawValue.max ?? 10)
-            var componentCount = UInt(0)
-            let lower : UInt32 = 1
-            let upper : UInt32 = 30
-            
-            var components: [ChartDataComponentType] = []
-            for _ in 0 ..< 100 {
-                let value = UInt(arc4random_uniform(upper - lower) + lower)
-                if (componentCount + value) <= chartMaxValue {
-                    let color = NSColor.randomColor
-                    let newComponent = componentType.init(value: value, color: color.CGColor)
-                    components.append(newComponent)
-                    componentCount += value
-                } else {
-                    break
-                }
-            }
-            return components
-        } else {
-            let componentMaxValue = UInt32(componentType.max ?? 100)
-            let chartMaxNumberComponents = Int(style.rawValue.max ?? 10)
-            let lower : UInt32 = 0
-            let upper : UInt32 = componentMaxValue
-            
-            var components: [ChartDataComponentType] = []
-            for _ in 0 ..< Int(chartMaxNumberComponents) {
-                let value = UInt(arc4random_uniform(upper - lower) + lower)
-                let color = NSColor.randomColor
-                let newComponent = componentType.init(value: value, color: color.CGColor)
-                components.append(newComponent)
-            }
-            return components
-        }
-    }
-}
-
-extension NSColor {
-    static var randomColor: NSColor {
-        let red = CGFloat(drand48())
-        let green = CGFloat(drand48())
-        let blue = CGFloat(drand48())
-        return NSColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 }
