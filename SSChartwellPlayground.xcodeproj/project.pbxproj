@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7370BBEA1C08F963009398CE /* SSChartwell_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */; };
-		7370BBEB1C08F963009398CE /* SSChartwell_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7370BBED1C090603009398CE /* ChartwellRadar.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A8041D1C02893E00C2823E /* ChartwellRadar.ttf */; };
 		7370BBEE1C090603009398CE /* ChartwellRings.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A8041E1C02893E00C2823E /* ChartwellRings.ttf */; };
 		7370BBEF1C090603009398CE /* ChartwellRose.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A8041F1C02893E00C2823E /* ChartwellRose.ttf */; };
@@ -32,8 +30,6 @@
 		73A8042C1C02893E00C2823E /* ChartwellBarsVertical.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804211C02893E00C2823E /* ChartwellBarsVertical.ttf */; };
 		73A8042E1C02893E00C2823E /* ChartwellLines.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804221C02893E00C2823E /* ChartwellLines.ttf */; };
 		73FCC39A1C02EFC500C4F8CC /* ChartwellPies.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73A804231C02893E00C2823E /* ChartwellPies.ttf */; };
-		73FCC39D1C03729200C4F8CC /* SSChartwell_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC39B1C03727D00C4F8CC /* SSChartwell_iOS.framework */; };
-		73FCC39E1C03729200C4F8CC /* SSChartwell_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCC39B1C03727D00C4F8CC /* SSChartwell_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73FCC3A21C03980700C4F8CC /* ChartListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCC3A11C03980700C4F8CC /* ChartListTableViewController.swift */; };
 		73FCC3A41C03986B00C4F8CC /* ChartDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCC3A31C03986B00C4F8CC /* ChartDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +41,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7370BBEB1C08F963009398CE /* SSChartwell_macOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +51,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				73FCC39E1C03729200C4F8CC /* SSChartwell_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +58,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SSChartwell_macOS.framework; path = "/Users/jeffberg/Library/Developer/Xcode/DerivedData/SSChartwellPlayground-akjnhortmiawkidugmkicwdsavic/Build/Products/Debug/SSChartwell_macOS.framework"; sourceTree = "<absolute>"; };
 		7377F6461C077CBE00459BD2 /* SSChartwell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSChartwell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7377F6481C077CBE00459BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7377F64C1C077CBE00459BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,7 +78,6 @@
 		73A804211C02893E00C2823E /* ChartwellBarsVertical.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChartwellBarsVertical.ttf; sourceTree = "<group>"; };
 		73A804221C02893E00C2823E /* ChartwellLines.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChartwellLines.ttf; sourceTree = "<group>"; };
 		73A804231C02893E00C2823E /* ChartwellPies.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChartwellPies.ttf; sourceTree = "<group>"; };
-		73FCC39B1C03727D00C4F8CC /* SSChartwell_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSChartwell_iOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SSChartwellPlayground-akjnhortmiawkidugmkicwdsavic/Build/Products/Debug-iphoneos/SSChartwell_iOS.framework"; sourceTree = "<group>"; };
 		73FCC3A11C03980700C4F8CC /* ChartListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartListTableViewController.swift; sourceTree = "<group>"; };
 		73FCC3A31C03986B00C4F8CC /* ChartDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7370BBEA1C08F963009398CE /* SSChartwell_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73FCC39D1C03729200C4F8CC /* SSChartwell_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +109,6 @@
 				7377F64C1C077CBE00459BD2 /* Assets.xcassets */,
 				7377F64E1C077CBE00459BD2 /* Main.storyboard */,
 				7377F6511C077CBE00459BD2 /* Info.plist */,
-				7370BBE91C08F963009398CE /* SSChartwell_macOS.framework */,
 			);
 			path = Playground_macOS;
 			sourceTree = "<group>";
@@ -153,7 +142,6 @@
 				73A803FE1C0287C900C2823E /* Assets.xcassets */,
 				73A804001C0287C900C2823E /* LaunchScreen.storyboard */,
 				73A804031C0287C900C2823E /* Info.plist */,
-				73A804321C0289A800C2823E /* Frameworks */,
 			);
 			path = Playground_iOS;
 			sourceTree = "<group>";
@@ -170,14 +158,6 @@
 				73A804231C02893E00C2823E /* ChartwellPies.ttf */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		73A804321C0289A800C2823E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				73FCC39B1C03727D00C4F8CC /* SSChartwell_iOS.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
