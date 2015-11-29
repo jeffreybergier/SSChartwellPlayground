@@ -143,7 +143,7 @@
         <!--MIT License-->
         <scene sceneID="sRX-zo-56G">
             <objects>
-                <viewController title="MIT License" id="CjA-Bc-riS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MIT LICENSE" title="MIT License" id="CjA-Bc-riS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RW4-Ml-ArH"/>
                         <viewControllerLayoutGuide type="bottom" id="zyd-5j-Gww"/>
@@ -156,7 +156,7 @@
                                 <rect key="frame" x="20" y="20" width="560" height="580"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">// // Created by Jeffrey Bergier on 11/23/15. //
+                                <string key="text">// // Created by Jeffrey Bergier on 11/23/15. //
 //  Copyright © 2015 Jeffrey Bergier.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -177,7 +177,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 //
-//</mutableString>
+//</string>
                                 <color key="textColor" red="0.0" green="0.46786099137931025" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
